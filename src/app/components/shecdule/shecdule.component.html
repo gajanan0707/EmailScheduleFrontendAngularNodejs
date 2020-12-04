@@ -1,0 +1,39 @@
+<div class="container" >
+  <h1 class="titleheader">Email Shedule</h1>
+  <div class="d-flex justify-content-center popupclass">
+    
+  <form  [formGroup]="sheduleForm" (ngSubmit)="onSubmit()">
+    <!--------------------- Date feild ---------------------------------------------------------->
+    <div class="form-group">
+      <label class="labelclass">
+        Date
+        <input class="form-control"  placeholder="Select The date" formControlName="date" [owlDateTimeTrigger]="dt3" [owlDateTime]="dt3">
+        <owl-date-time [pickerType]="'calendar'" #dt3></owl-date-time>
+      </label>
+    </div>
+
+    <!---------------------------------- day feild ------------------------------------------------>
+    <div class="form-group">
+      <select class="custom-select" (change)="changedays($event)" formControlName="stepday">
+        <option value="">Choose your Days Step</option>
+        <option *ngFor="let item of collection" [ngValue]="item">{{item}}</option>
+      </select>
+    </div>
+
+    <!-------------------------------------- Time feild-------------------------------------------- -->
+    <div class="form-group">
+      <label class="labelclass">
+        Select Time for Send Email on Time
+        <input class="form-control" placeholder="Select Time send Email" formControlName="time" [owlDateTimeTrigger]="dt4" [owlDateTime]="dt4">
+        <owl-date-time [pickerType]="'timer'" #dt4></owl-date-time>
+      </label>
+    </div>
+    <div>
+    </div>
+
+    <!------------------ submit  Buttone ---------------------------------------------------------------->
+    <button type="submit" class="btn btn-primary">Set Shedule</button>
+  </form>
+  </div>
+  
+</div>

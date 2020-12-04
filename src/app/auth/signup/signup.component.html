@@ -1,0 +1,56 @@
+<div class="container px-4 py-5 mx-auto">
+  <div class="card card0">
+    <div class="d-flex flex-lg-row flex-column-reverse">
+      <div class="card card1">
+        <div class="row justify-content-center my-auto">
+          <div class="col-md-8 col-10 my-5">
+            <div class="row justify-content-center px-3 mb-3">
+              <img id="logo" src="../../../assets/email.png">
+            </div>
+
+            <h3 class="mb-5 text-center heading"></h3>
+            <h6 class="msg-info">Please Create your account</h6>
+
+            <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+              <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" formControlName="name" id="name" aria-describedby="nameHelp"
+                  placeholder="Enter Name Here">
+              </div>
+
+              <!------------------------------------Email Address --------------------------------- -->
+              <div class="form-group"> <label class="form-control-label text-muted">Email</label>
+                <input type="text" id="email" formControlName="email" name="email" placeholder="Enter Email Here"
+                  class="form-control">
+              </div>
+
+              <!------------------------------------Password -------------------------------------- -->
+              <div class="form-group"> <label class="form-control-label text-muted">Password</label>
+                <input type="password" formControlName="password" id="psw" name="psw" placeholder="Enter Password Here"
+                  class="form-control">
+              </div>
+
+              <!---------------------------------- login button -------------------------------------- -->
+              <div class="row justify-content-center my-3 px-3"> <button class="btn-block btn-color">Signup</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+        <div class="bottom text-center mb-5">
+          <p routerLink="/login" class="sm-text mx-auto mb-3">I you already have an account?<button
+              class="btn btn-white ml-2">Login Here</button></p>
+        </div>
+      </div>
+      <div class="card card2">
+        <div class="my-auto mx-md-5 px-md-5 right">
+          <h3 class="text-white">We are more than just a company</h3> <small class="text-white">Lorem ipsum dolor sit
+            amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
